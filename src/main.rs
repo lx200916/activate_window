@@ -140,7 +140,6 @@ impl Dispatch<ZwlrForeignToplevelHandleV1, ()> for MyState{
 }
 fn main() {
     let args = Args::parse();
-    println!("{:?}",args);
     let conn = Connection::connect_to_env().expect("Failed to connect to the wayland server");
     let display = conn.display();
     let mut event_queue: EventQueue<MyState> = conn.new_event_queue();
